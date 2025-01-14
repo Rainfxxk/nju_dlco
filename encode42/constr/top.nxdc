@@ -1,0 +1,5 @@
+top=top
+
+x (SW3,SW2, SW1, SW0)
+en SW4
+y (LD1, LD0)
