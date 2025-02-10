@@ -1,0 +1,5 @@
+top=top
+
+wr_en SW0
+data_in (SW4, SW3, SW2, SW1)
+out (LD3, LD2, LD1, LD0)
