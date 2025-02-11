@@ -1,17 +1,22 @@
 module top(
   input clk,
   input wr_en,
-  input [3:0] data_in,
-  output [3:0] out
+  input [3:0] addr,
+  input [7:0] data_in,
+  output [7:0] out
 );
 
-  reg [3:0] mem;
+  reg [7:0] ram[15:0];
 
-  assign out = mem;
+  initial begin
+    $readmemh("/home/rain/proj/nju_dlco/regs/mem1.txt", ram, 0, 15);
+  end
+
+  assign out = ram[addr];
 
   always @(posedge clk) begin
     if (wr_en) begin
-      mem <= data_in;
+      ram[addr] <= data_in;
     end
   end
 
