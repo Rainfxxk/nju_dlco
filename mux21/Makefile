@@ -10,7 +10,3 @@ Vmux21: obj_dir
 
 obj_dir: mux21.v mux21_tb.cpp
 	verilator -Wall --trace -cc mux21.v --exe mux21_tb.cpp
-
-clean:
-	rm -rf obj_dir;
-	rm -r waveform.vcd
