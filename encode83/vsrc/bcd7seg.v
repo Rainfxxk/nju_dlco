@@ -18,7 +18,7 @@ module bcd7seg (
   assign out6 = ~in3 & in2 & in1 & ~in0;
   assign out7 = ~in3 & in2 & in1 & in0;
   assign out8 = in3 & ~in2 & ~in1 & ~in0;
-  assign out9 = in3 & ~in2 & ~in1 & ~in0;
+  assign out9 = in3 & ~in2 & ~in1 & in0;
 
   assign out[0] = out1 | out4;
   assign out[1] = out5 | out6;
